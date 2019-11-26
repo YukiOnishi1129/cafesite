@@ -1,0 +1,13 @@
+body{
+    background:red;
+}
+
+.main {
+    font-size:14px;
+    &__child {
+        color:red;
+    }
+    &__child2 {
+        color: green;
+    }
+}
