@@ -1,13 +1,17 @@
 body{
-    background:red;
+    background:gainsboro;
 }
 
 .main {
-    font-size:14px;
+    font-size:70px;
     &__child {
-        color:red;
+        color:blue;
     }
     &__child2 {
         color: green;
     }
+}
+
+.sample {
+    display: flex;
 }
