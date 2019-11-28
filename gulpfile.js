@@ -2,6 +2,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
@@ -29,7 +30,10 @@ function sync(done) {
 gulp.task("sass", () => {
     return gulp
         .src('scss/*.scss')
-        .pipe(sass())
+        .pipe(sassGlob())
+        .pipe(sass({
+          outputStyle: 'expanded'
+        }))
         .pipe(gulp.dest('css'))
 });
 
@@ -69,9 +73,11 @@ function watchFiles(done) {
       browserSync.reload();
       done();
     };
-    gulp.watch('scss/*.scss').on('change', gulp.series("sass", browserReload));
+    gulp.watch('scss/**').on('change', gulp.series("sass", browserReload));
+    // gulp.watch('scss/**/**/*.scss').on('change', gulp.series("sass", browserReload));
     gulp.watch('js/src/*.js').on('change', gulp.series("babel", browserReload));
     gulp.watch('index.html').on('change', gulp.series(browserReload));
+    gulp.watch('style.css').on('change', gulp.series(browserReload));
     gulp.watch('img/src/*.{jpg,jpeg,png,gif,svg}').on('change', gulp.series("imagemin", browserReload));
 }
 

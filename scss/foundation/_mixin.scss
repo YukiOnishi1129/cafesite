@@ -1,0 +1,49 @@
+// ==========================
+// メディアクエリのブレークポイント設定
+// ==========================
+$breakpoints: (
+    'sss' : 'screen and (max-width: 320px)',
+    'ss' : 'screen and (max-width: 375px)',
+    'sm' : 'screen and (max-width: 414px)',
+    'sl' : 'screen and (max-width: 480px)',
+    'tm' : 'screen and (max-width: 768px)',
+    'tl' : 'screen and (max-width: 1024px)',
+) !default;
+
+// ==========================
+// mixin
+// ==========================
+@mixin sss($breakpoint: sss) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin ss($breakpoint: ss) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin sm($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin sl($breakpoint: sl) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin tm($breakpoint: tm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+@mixin tl($breakpoint: tl) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

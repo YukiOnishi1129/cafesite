@@ -1,17 +1,27 @@
-body{
-    background:gainsboro;
-}
+// foundation
+@import 'foundation/_reset.scss';
+@import 'foundation/**';
 
-.main {
-    font-size:70px;
-    &__child {
-        color:blue;
-    }
-    &__child2 {
-        color: green;
-    }
-}
+// @import 'foundation/_base.scss';
 
-.sample {
-    display: flex;
-}
+// layout
+// @import 'layout/l-background.scss';
+@import 'layout/**';
+
+// object
+// component
+@import 'object/**';
+// @import 'object/component/c-button.scss';
+// @import 'object/component/c-component.scss';
+// @import 'object/component/c-button.scss';
+
+// project
+// @import 'object/project/p-top.scss';
+// @import 'object/project/p-navigation.scss';
+// @import 'object/project/p-about.scss';
+// @import 'object/project/p-info.scss';
+// @import 'object/project/p-menu.scss';
+// @import 'object/project/p-party.scss';
+// @import 'object/project/p-access.scss';
+
+// utility

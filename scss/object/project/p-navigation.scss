@@ -1,0 +1,9 @@
+@import '../../foundation/_variable.scss';
+@import '../../foundation/_mixin.scss';
+
+.p-nav{
+    background:$background_color_mainDark;
+    margin:0 auto;
+    width:90%;
+    height:100px;
+}
