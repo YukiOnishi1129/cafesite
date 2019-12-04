@@ -2,5 +2,13 @@
 @import '../../foundation/_mixin.scss';
 
 .c-title {
-    color:$font_color_gray;
+    font-size:$font-size_xl;
+    &__nav {
+        font-size:$font-size_default;
+        color:$font_color_gray;
+        text-decoration:none;
+    }
+    &--white {
+        color:$font_color_gray;
+    }
 }
