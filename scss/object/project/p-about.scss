@@ -2,11 +2,16 @@
 @import '../../foundation/_mixin.scss';
 
 .p-about {
-    margin: 40px auto;
+    margin: 120px auto;
     width:99%;
     height: 80%;
     &__title{
         margin-bottom:30px;
         text-align:center;
+    }
+    &__description{
+        text-align:center;
+        line-height:200%;
+        color:$font_color_gray;
     }
 }

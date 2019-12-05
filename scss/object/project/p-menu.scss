@@ -4,5 +4,8 @@
 .p-menu {
     margin: 0 auto;
     width: 99%;
-    height: 60%;
+    height: 360px;
+    background: $background_color_white;
+    border-top: 1px dotted $line_color_mainDark;
+    border-bottom: 1px dotted $line_color_mainDark;
 }

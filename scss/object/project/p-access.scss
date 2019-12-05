@@ -2,7 +2,31 @@
 @import '../../foundation/_mixin.scss';
 
 .p-access {
-    margin: 0 auto;
+    // margin: 120px auto;
+    margin-top:80px;
+    margin-right:auto;
+    margin-left:auto;
     width: 99%;
-    height: 60%;
+    height: 80%;
+    &__title{
+        margin-bottom:50px;
+        text-align:center;
+    }
+    &__area {
+        display:flex;
+    }
+    &--map{
+        width:50%;
+        &__img{
+            width:100%;
+            display:block;
+        }
+    }
+    &--detail{
+        width:50%;
+        margin-left:10px;
+        padding-left:20px;
+        background:$background_color_mainDark;
+        color:$font_color_gray
+    }
 }
